@@ -1,0 +1,22 @@
+[filter "lfs"]
+    clean = git lfs clean %f
+    smudge = git lfs smudge %f
+    required = true
+[user]
+    name = Jonathan Hills
+    email = jhills@veracross.com
+[push]
+    default = simple
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    di = diff
+    unstage = reset HEAD --
+    bog = log --oneline --decorate --all --graph
+    ds = diff --staged
+    pr = pull --rebase
+    app = add app/*
+[merge]
+    conflictstyle = diff3

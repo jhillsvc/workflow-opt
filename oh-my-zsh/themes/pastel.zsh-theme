@@ -5,7 +5,7 @@ if which rvm-prompt &> /dev/null; then
   ruby_env=' ‹$(rvm-prompt i v g)›%{$reset_color%}'
 else
   if which rbenv &> /dev/null; then
-    ruby_env=' ($(rbenv version-name))%{$reset_color%}'
+    ruby_env=' ($(rbenv version-name 2>&1))%{$reset_color%}'
   fi
 fi
 
